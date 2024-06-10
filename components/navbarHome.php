@@ -8,6 +8,7 @@ $menu_items = array(
     '/blog.php' => 'Blogs',
     '/contact.php' => 'Contact us',
 );
+
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">

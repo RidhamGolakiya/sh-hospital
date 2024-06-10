@@ -1,7 +1,6 @@
 <?php
 session_start();
 include_once "connection.php";
-
 // Redirect if logged in
 function redirectIfLoggedIn($appUrl)
 {
@@ -12,6 +11,8 @@ function redirectIfLoggedIn($appUrl)
       header("Location: $appUrl/doctor/dashboard.php");
     } elseif ($_SESSION['role'] == "patients") {
       header("Location: $appUrl/patient/dashboard.php");
+    }elseif ($_SESSION['role'] == "receptionists") {
+      header("Location: $appUrl/receptionist/dashboard.php");
     }
     exit;
   }
